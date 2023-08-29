@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeItemsCollectionViewCell" id="gTV-IL-0wX" customClass="HomeItemsCollectionViewCell" customModule="TestTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="143"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-er-tXI">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="143"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7a-7f-MAe">
+                        <rect key="frame" x="136" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="4mb-LG-Hwh"/>
+                            <constraint firstAttribute="width" constant="24" id="9D1-O1-ZyB"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="heart_unfill"/>
+                        <connections>
+                            <action selector="tapOnFavoriteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="dVC-aT-ANR"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="vJN-er-tXI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HoO-RY-E53"/>
+                <constraint firstItem="vJN-er-tXI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="L5N-E0-RvZ"/>
+                <constraint firstItem="c7a-7f-MAe" firstAttribute="top" secondItem="vJN-er-tXI" secondAttribute="top" constant="10" id="crA-zp-opz"/>
+                <constraint firstAttribute="bottom" secondItem="vJN-er-tXI" secondAttribute="bottom" id="kch-oe-yvT"/>
+                <constraint firstItem="c7a-7f-MAe" firstAttribute="trailing" secondItem="vJN-er-tXI" secondAttribute="trailing" constant="-10" id="kn3-rT-Ji6"/>
+                <constraint firstAttribute="trailing" secondItem="vJN-er-tXI" secondAttribute="trailing" id="sP1-7j-oz5"/>
+            </constraints>
+            <size key="customSize" width="170" height="143"/>
+            <connections>
+                <outlet property="favoriteButton" destination="c7a-7f-MAe" id="aD6-ch-b3Z"/>
+                <outlet property="itemImage" destination="vJN-er-tXI" id="dTR-kr-7CE"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="53.672985781990519"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart_unfill" width="24" height="20"/>
+    </resources>
+</document>
